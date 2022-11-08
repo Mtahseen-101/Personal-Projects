@@ -6,13 +6,13 @@
 
 import random
 
-score = int(0)
+score = int(0) # variable to monitor score
 
-question1 = input("What is the capital of England?")
-answer1 = "London"
-if question1 == answer1:
+question1 = input("What is the capital of England?") #question for the user
+answer1 = "London" # correct answer
+if question1 == answer1: # determine if the answer was correct
     print("Correct")
-    score += 1
+    score += 1 # add to the score if correct
 else:
     print("Incorrect")
 
@@ -24,9 +24,10 @@ if question2 == answer2:
 else:
     print("Incorrect")
 
+# generate 2 random numbers between 1 and 10 to get the user to add together
 x = random.randint(1, 11)
 y = random.randint(1, 11)
-question3 = "What is {0} + {1} = ?".format(x, y)
+question3 = "What is {0} + {1} = ?(Please input a number)".format(x, y)
 userInput = int(input(question3))
 answer3 = int(x+y)
 if userInput == answer3:
@@ -51,8 +52,8 @@ if question5 == answer5:
 else:
     print("Incorrect")
 
-print("")
 
+# output appropriate message depending on the score the user got
 if score == 0:
     print("End of quiz. You scored", score, "Did you even try?")
 elif 1 <= score <= 3:
